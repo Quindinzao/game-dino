@@ -24,6 +24,16 @@ body {
   overflow: hidden;
 }
 
+.score {
+  font-size: 48px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #FFFFFF;
+  position: absolute;
+  top: 100px;
+  right: 50px;
+}
+
 .clouds {
   width: 200px;
   position: absolute;
@@ -46,12 +56,31 @@ body {
   filter: grayscale(1);
 }
 
+.love-of-my-life {
+  width: 90px;
+
+  display: none;
+
+  position: absolute;
+  bottom: 0;
+  right: 40%;
+  transform: scaleX(-1);
+  
+  animation-name: none;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
 .character {
   width: 75px;
 
   position: absolute;
   bottom: 0;
   left: 48px;
+  
+  animation-name: none;
+  animation-duration: 3s;
+  animation-timing-function: linear;
 }
 
 .jump {
@@ -71,6 +100,54 @@ body {
   animation-duration: 1.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+.dialog {
+  width: 512px;
+  height: 86px;
+
+  padding: 12px;
+
+  display: none;
+
+  background-color: #fff;
+  border-radius: 3px;
+
+  font-size: 16px;
+  font-family: sans-serif;
+
+  position: absolute;
+  left: 25%;
+  bottom: 30%;
+}
+
+.dialog-body {
+  width: 100%;
+  height: 100%;
+
+  display: relative;
+
+  background-color: blue;
+}
+
+@keyframes dinovana-animation {
+  from {
+    right: -90px;
+  }
+
+  to {
+    right: 40%;
+  }
+}
+
+@keyframes character-animation {
+  from {
+    left: 48px;
+  }
+
+  to {
+    left: 40%;
+  }
 }
 
 @keyframes clouds-animation {
